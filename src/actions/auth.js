@@ -18,7 +18,7 @@ export const getUser = (user) => async dispatch => {
 export const login = () => async dispatch => {
   try {
     // Sign in with Firebase Auth
-    const provider = new firebase.auth.GoogleAuthProvider();
+    const provider = new firebase.auth.TwitterAuthProvider();
     const { user } = await firebase.auth().signInWithPopup(provider);
     
     // Set up the user

@@ -14,43 +14,10 @@ const Footer = ({
   return (
     <footer className="footer">
       <div className="columns">
-        <div className="column">
-          <nav className="nav">
-            <div className="navbar-item">
-              <Link to='/'>Home</Link>
-            </div>
-            <div className="navbar-item">
-              <Link to='/r/index'>Subreddits</Link>
-            </div>
-            {
-              isLoggedIn && (
-                <div className="navbar-item">
-                  <Link to='/create-a-subreddit'>Create a Subreddit</Link>
-                </div>
-              )
-            }
-          </nav>
-        </div>
         <div className="column mid-column has-text-centered">
           <p>
-            &copy;{new Date().getFullYear()} <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">Dave Regg</a>
+            &copy;{new Date().getFullYear()} <a href="http://www.twitter.com/tannedoaksprout" rel="noopener noreferrer" target="_blank">Oaksprout the Tan</a>
           </p>
-        </div>
-        <div className="column">
-          {
-            isLoggedIn ? (
-              <nav className="nav">
-                <div className="navbar-item">
-                  <Link to={`/u/${currentUser.id}`} className="button is-light is-info mb-1">{currentUser.name}</Link>
-                </div>
-                <div className="navbar-item">
-                  <button className="button is-danger mt-1" onClick={() => logout()}>Logout</button>
-                </div>
-              </nav>
-            ) : (
-              <button className="button is-info" onClick={() => login()}>Login with Google</button>
-            )
-          }
         </div>
       </div>
     </footer>

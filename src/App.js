@@ -11,12 +11,13 @@ TODOS:
 */
 
 import React, { useEffect } from 'react';
-import 'bulma/css/bulma.css';
 import './App.scss';
+// import 'bulma/css/bulma.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 import firebase from './firebase';
 
@@ -57,7 +58,7 @@ function App() {
         <div className="content">
           <Header />
             <Switch>
-              <Route exact path='/' component={Index} />
+              <Redirect exact from='/' to='/r/offerings' component={Index} />
               <PrivateRoute exact path='/create-a-subreddit' component={CreateSubreddit} />
               <Route exact path='/r/index' component={Subreddits} />
               <Route exact path ='/r/:name' component={Subreddit} />

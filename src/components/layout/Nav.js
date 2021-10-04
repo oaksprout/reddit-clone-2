@@ -20,10 +20,10 @@ const Nav = ({
   const [ isActive, setIsActive ] = useState(false);
 
   return (
-    <nav className="navbar is-light" role="navigation" aria-label="dropdown navigation">
+    <nav className="navbar is-primary" role="navigation" aria-label="dropdown navigation">
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
-          Reggit
+          Offerings
         </Link>
 
         <button
@@ -40,8 +40,8 @@ const Nav = ({
         </button>
       </div>
 
-      <div id="navbarBasicExample" className={`navbar-menu ${isActive && 'is-active'}`}>
-        <div className="navbar-start">
+      <div id="navbarBasicExample" className={`navbar-menu is-primary`}>
+        {/* <div className="navbar-start">
           <div className="navbar-item has-dropdown is-hoverable">
             <Link to="/r/index" className="navbar-link is-arrowless">
               Subreddits
@@ -62,14 +62,14 @@ const Nav = ({
           <div className="navbar-item">
             { isLoggedIn && <Link to='/create-a-subreddit'>Create a Subreddit</Link>}
           </div>
-        </div>
+        </div> */}
 
         <div className="navbar-end">
             {
               !isLoggedIn ? (
                 <div className="navbar-item">
                   <button className="button is-primary" onClick={() => login()}>
-                    <strong>Login with Google</strong>
+                    <strong>Sign In with Twitter</strong>
                   </button>
                 </div>
               ) : (

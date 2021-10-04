@@ -40,7 +40,7 @@ const CommentForm = ({
         className="button is-info is-small mb-3"
         onClick={() => togglePreviewMarkdown(!previewMarkdown)}
       >
-        {previewMarkdown ? 'Hide Preview' : 'Preview Desc'}
+        {previewMarkdown ? 'Hide Preview' : 'Preview Description'}
       </button>
 
       <div className="field">

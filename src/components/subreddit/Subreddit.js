@@ -67,12 +67,14 @@ const Subreddit = ({
   return (
     <section>
       <Hero
-        medium
-        color={(subreddit !== null) && subreddit.color}
+        small
+        color="yellow"
       >
         <div className="hero-body">
           <div className="container">
-            {
+            <h1 className="title is-capitalized">Make your voice heard</h1>
+            <h4 className="title is-capitalized">vote on sacrifices to help Templars discover top Fire Ritual candidates</h4>
+            {/* {
               (isLoading || subreddit === null) ? (
                 <h1 className="title">Loading...</h1>
               ) : (!isLoading && Object.keys(subreddit).length === 0) ? (
@@ -85,12 +87,12 @@ const Subreddit = ({
               ) : (
                 <h1 className=" title is-capitalized">{ subreddit.name }</h1>
               )
-            }
-            {
+            } */}
+            {/* {
               (subreddit !== null && currentUser.id === subreddit.user_id) && (
                 <button className="button is-danger" onClick={() => deleteSubreddit(subreddit.id, history)}>Delete Subreddit</button>
               )
-            }
+            } */}
           </div>
         </div>
       </Hero>

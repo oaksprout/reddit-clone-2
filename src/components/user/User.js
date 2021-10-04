@@ -64,7 +64,7 @@ const User = ({
       <div className="hero is-primary mb-5">
         <div className="hero-body">
           <div className="container has-text-centered">
-            <figure className="image is-128x128" style={{ margin: '0 auto' }}>
+            <figure className="image is-32x32" style={{ margin: '0 auto' }}>
               <img src={ (user !== null && user.image) && user.image } alt="User avatar" />
             </figure>
             <h1 className="title">

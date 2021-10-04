@@ -1,13 +1,13 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAqk7zFPSK034_4RN--GO6RRNIJGAX6AH8",
-  authDomain: "reddit-clone-2-104ec.firebaseapp.com",
-  databaseURL: "https://reddit-clone-2-104ec.firebaseio.com",
-  projectId: "reddit-clone-2-104ec",
-  storageBucket: "reddit-clone-2-104ec.appspot.com",
-  messagingSenderId: "1081257686534",
-  appId: "1:1081257686534:web:55d3cd74066a82e3413587"
+  apiKey: "AIzaSyCb52WtWB7I14uzj2WqKPUqgf3eAeL_cS0",
+  authDomain: "offerings-aa4ae.firebaseapp.com",
+  projectId: "offerings-aa4ae",
+  storageBucket: "offerings-aa4ae.appspot.com",
+  messagingSenderId: "667282666621",
+  appId: "1:667282666621:web:14610c4000519f7f802d14",
+  measurementId: "G-T9KNQX3N8Q"
 };
 
 // Initialize Firebase
