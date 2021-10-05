@@ -21,6 +21,7 @@ import { fetchUsers } from '../../actions/users';
 import {
   fetchVotes
 } from '../../actions/votes';
+import { login } from '../../actions/auth';
 
 
 const Subreddit = ({
@@ -72,8 +73,8 @@ const Subreddit = ({
       >
         <div className="hero-body">
           <div className="container">
-            <h1 className="title is-capitalized">Make your voice heard</h1>
-            <h4 className="title is-capitalized">vote on sacrifices to help Templars discover top Fire Ritual candidates</h4>
+            <h1 className="title is-capitalized">Inscriptions of Temple Sacrifice</h1>
+            <h4 style={{fontWeight: 300}}>Cast Votes on Temple Offerings to Help Templars Discover Top Fire Ritual Candidates</h4>
             {/* {
               (isLoading || subreddit === null) ? (
                 <h1 className="title">Loading...</h1>
@@ -98,14 +99,15 @@ const Subreddit = ({
       </Hero>
       <Container>
         {
-          isLoggedIn && (
+          isLoggedIn ? (
             <button
               className="button is-primary"
               onClick={() => toggleShowForm(!showForm)}
             >
-              { showForm ? ('Hide Form') : ('Add a Post') }
+              { showForm ? ('Cancel') : ('Inscribe an Offering') }
             </button>
-          )
+          ) : 
+          <div>Sign In to Inscribe an Offering</div>
         }
         {
           showForm && (
@@ -116,7 +118,7 @@ const Subreddit = ({
           )
         }
         <form className="form">
-          <div className="control">
+          <div className="control" style={{width: 400}}>
             <input
               type="text"
               className="input search-box"

@@ -65,7 +65,7 @@ const PostCard = ({
       </div>
       <div className="media-content post-content">
         <p className="has-text-weight-bold">
-          <Link to={`/r/${subreddit}/${post_id}`}>{post.title}</Link>
+          <Link to={`/r/${subreddit}/${post_id}`}><div className='post-title'>{post.title}</div></Link>
         </p>
         {
           post.desc !== '' && (

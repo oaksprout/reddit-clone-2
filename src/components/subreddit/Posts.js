@@ -76,7 +76,7 @@ const Posts = ({
           Sort By Most Votes
         </button>
         <button
-          className={`ml-5 is-small button is-info ${sortByNew && `is-light`}`}
+          className={`ml-5 is-small button is-primary ${sortByNew && `is-light`}`}
           onClick={() => handleSortByNew()}
           disabled={sortByNew}
         >

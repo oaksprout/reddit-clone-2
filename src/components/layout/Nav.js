@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import { login, logout } from '../../actions/auth';
 import { fetchSubreddits } from '../../actions/subreddits';
 
+import {FaTwitter} from 'react-icons/fa'
+
 const Nav = ({
   login,
   logout,
@@ -22,11 +24,11 @@ const Nav = ({
   return (
     <nav className="navbar is-primary" role="navigation" aria-label="dropdown navigation">
       <div className="navbar-brand">
-        <Link className="navbar-item" to="/">
-          Offerings
+        <Link className="navbar-item" style={{fontSize: 20}} to="/">
+          <span style={{fontFamily: "Liu Jian Mao Cao", marginRight: 10}}>血</span> Blood Ledger
         </Link>
 
-        <button
+        {/* <button
           className={`navbar-burger burger ${isActive && 'is-active'}`}
           aria-label="menu"
           aria-expanded="false"
@@ -37,7 +39,7 @@ const Nav = ({
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </button>
+        </button> */}
       </div>
 
       <div id="navbarBasicExample" className={`navbar-menu is-primary`}>
@@ -68,8 +70,9 @@ const Nav = ({
             {
               !isLoggedIn ? (
                 <div className="navbar-item">
-                  <button className="button is-primary" onClick={() => login()}>
-                    <strong>Sign In with Twitter</strong>
+                  <button className="button is-white is-outline" onClick={() => login()}>
+                    <FaTwitter style={{marginRight: 10}} />
+                    Sign In
                   </button>
                 </div>
               ) : (
@@ -78,7 +81,7 @@ const Nav = ({
                     <Link to={`/u/${currentUser.id}`} className="button is-light is-info">{currentUser.name}</Link>
                   </div>
                   <div className="navbar-item">
-                    <button className="button is-danger" onClick={() => logout()}>
+                    <button className="button is-primary" onClick={() => logout()}>
                       Logout
                     </button>
                   </div>
