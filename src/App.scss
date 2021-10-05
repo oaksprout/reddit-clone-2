@@ -24,7 +24,7 @@ $link: $primary;
 
 $navbar-breakpoint: 0px;
 
-@import "node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma/bulma.sass";
 
 
 .navbar-brand, .title, .post-title, .button {
