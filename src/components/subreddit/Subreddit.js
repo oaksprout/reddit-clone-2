@@ -69,12 +69,11 @@ const Subreddit = ({
     <section>
       <Hero
         small
-        color="yellow"
       >
-        <div className="hero-body">
+        <div className="hero-body"  style={{backgroundColor: 'black', color: 'white'}}>
           <div className="container">
-            <h1 className="title is-capitalized">Inscriptions of Temple Sacrifice</h1>
-            <h4 style={{fontWeight: 300}}>Cast Votes on Temple Offerings to Help Templars Discover Top Fire Ritual Candidates</h4>
+            <h1 className="title is-capitalized" style={{color: 'white'}}>Inscriptions of Temple Sacrifice</h1>
+            <h4 style={{fontWeight: 300, color: 'white', lineHeight: 1.3}}>Cast Votes on Temple Offerings to Help Templars<br />Discover Top Fire Ritual Candidates</h4>
             {/* {
               (isLoading || subreddit === null) ? (
                 <h1 className="title">Loading...</h1>
